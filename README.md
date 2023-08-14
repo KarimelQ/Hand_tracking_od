@@ -1,0 +1,3 @@
+Hand Tracking with Object Detection using TensorFlow
+
+This repository contains a project focused on hand tracking using object detection techniques from TensorFlow. The project includes a comprehensive pipeline implemented and tested on Ubuntu 20.04. The user interface is built using the Tkinter library, providing a solid foundation for various applications. The code is written in Python and also includes components in C++, as well as integration with an ESP32-based Arduino board for use with an ESP-CAM32 camera module.

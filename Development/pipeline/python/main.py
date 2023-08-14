@@ -10,12 +10,12 @@ from hand_detector      import HandDetector
 from camera_handler     import CameraHandler
 from interface_handler  import GestureApp
 
-def gesture_detection_loop(app, CameraHandler):
+def hand_tracking_loop(app):
     while True:
-        gesture = "x"
-        app.update_gesture_label(gesture)  # Update label with detected gesture
+        image = CH.take_picture()
+        x, y  = HD.get_hand_position(image,0.7)
+        app.update_hand_position(x,y)  # Update label with detected gesture
         time.sleep(0.1)  # Sleep for a while to control the loop frequency
-
 
 if __name__ == "__main__":
     root = tk.Tk()
@@ -23,7 +23,7 @@ if __name__ == "__main__":
     HD = HandDetector('','')
     CH = CameraHandler()
 
-    gesture_thread = threading.Thread(target=gesture_detection_loop, args=(app,CH))
+    gesture_thread = threading.Thread(target=hand_tracking_loop, args=(app,))
     gesture_thread.daemon = True
     gesture_thread.start()
     root.mainloop()

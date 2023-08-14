@@ -58,12 +58,6 @@ class handSimulator():
         image = self.take_picture()
         return self.extract_position(image)
 
-    def simulate_gesture(self, number_of_images):
-        images = [self.take_picture() for _ in range(number_of_images)]
-        positions = [self.extract_position(images[i]) for i in range(number_of_images)]
-        self.camera_deac(enable=False)
-        return positions, images
-
     def camera_deac(self, enable=True):
         """
         function

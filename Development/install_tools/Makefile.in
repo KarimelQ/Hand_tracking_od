@@ -1,0 +1,7 @@
+all:
+	chmod +x ./Development/install_tools/build.sh
+	./install_tools/build.sh --miniconda_folder "$(MINICONDA_FOLDER)" --miniconda_pkgs_cache "$(MINICONDA_PKGS_CACHE)" $(EDITABLE_MODE)
+
+test:
+	chmod +x ./Development/install_tools/test.sh
+	./Development/install_tools/test.sh --miniconda_folder "$(MINICONDA_FOLDER)"

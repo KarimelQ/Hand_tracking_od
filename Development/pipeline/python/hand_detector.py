@@ -13,8 +13,8 @@ import cv2
 
 class HandDetector:
     def __init__(self,config_path,checkpoint_path):
-        config_path = "/home/karimelq/Documents/Personal_work/Gestures_scratch/workspace/models/finetuned_ssd_model/pipeline.config"
-        checkpoint_path = "/home/karimelq/Documents/Personal_work/Gestures_scratch/workspace/models/finetuned_ssd_model"
+        config_path = "/home/karimelq/Documents/Dev/Handtracker/workspace/models/finetuned_ssd_model/pipeline.config"
+        checkpoint_path = "/home/karimelq/Documents/Dev/Handtracker/workspace/models/finetuned_ssd_model"
         self.detection_model = self.get_model(config_path,checkpoint_path)
         # TODO: add inference with simulated input to avoid stopping in real inference
         self.get_bounding_box(np.zeros(shape=(480,640,3)),1)

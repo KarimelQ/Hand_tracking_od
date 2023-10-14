@@ -76,7 +76,7 @@ Thumbs.db
 *.wmv
 
 #data (images & annotations)
-**/*.jpg
+# **/*.jpg
 **/*.png
 **/*.xml
 **/*.record
@@ -98,3 +98,5 @@ Thumbs.db
 **/tflite_src
 **/**.so
 **/**.tflite
+
+**/model_mobilenet.cc

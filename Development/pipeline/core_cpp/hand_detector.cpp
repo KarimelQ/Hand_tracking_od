@@ -5,7 +5,6 @@
 #include <tuple>
 #include <vector>
 
-
 std::tuple<cv::Point, cv::Point > Output_to_points(float *output, int original_w, int original_h){
     float ymin,xmin, ymax, xmax;
     float ratio_x,ratio_y;  
@@ -95,9 +94,9 @@ void HandDetector::drawBoundingBox(cv::Mat image, cv::Point pt1, cv::Point pt2) 
 
 cv::Point HandDetector::findMidpoint(cv::Mat image) {
     cv::Point pt1,pt2;
-    
+
     std::tie(pt1, pt2) = getBoundingBox(image, HAND_TRESHOLD, false);
-    
+
     float midX = (pt1.x + pt2.x) / 2;
     float midY = (pt1.y + pt2.y) / 2;
     return cv::Point(640.0-midX, midY);

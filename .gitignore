@@ -97,6 +97,7 @@ Thumbs.db
 **/*.ipynb
 **/tflite_src
 **/**.so
-**/**.tflite
+# **/**.tflite
+
 
 **/model_mobilenet.cc

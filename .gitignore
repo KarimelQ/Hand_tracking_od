@@ -17,7 +17,7 @@ keras/output/
 RR_online_predictions/
 RR_extracted_windows/
 datasets/
-models/
+# models/
 videos/
 output*/
 videos/
@@ -83,8 +83,14 @@ Thumbs.db
 
 #models
 **/*.pb
-**/ckpt*.*
-**/checkpoint
+**/ckpt-0.*
+**/ckpt-5.*
+**/ckpt-6.*
+**/ckpt-7.*
+**/ckpt-8.*
+**/ckpt-9.*
+**/ckpt-10.*
+# **/checkpoint
 **/variables*.*
 **/*.h5
 **/events.*
